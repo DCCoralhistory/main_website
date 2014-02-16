@@ -68,7 +68,7 @@ class SMTP {
    * Right now we only honor 'echo', 'html' or 'error_log'
    * @var string
    */
-  public $Debugoutput     = 'echo';
+  public $Debugoutput     = 'error_log';
 
   /**
    *  Sets VERP use on/off (default is off)
@@ -118,19 +118,21 @@ class SMTP {
   protected function edebug($str) {
     switch ($this->Debugoutput) {
       case 'error_log':
-        error_log($str);
+	    $date = date('d.m.Y h:i:s'); 
+        $log = "|  Date:  ".$date. " | " . $str ."\n";
+        error_log($str , 3 , "../logs/errorlog.txt");
         break;
       case 'html':
         //Cleans up output a bit for a better looking display that's HTML-safe
         echo htmlentities(preg_replace('/[\r\n]+/', '', $str), ENT_QUOTES, 'UTF-8')."<br>\n";
         break;
       case 'echo':
+	  echo $str;
       default:
         //Just echoes exactly what was received
         echo $str;
     }
   }
-
   /**
    * Initialize the class so that the data is in a known state.
    * @access public
