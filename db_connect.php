@@ -1,7 +1,7 @@
 <?php 
 
 $q = $_GET['q'];
-$con = mysqli_connect('mysql6.000webhost.com','a4662930_TOR','rqd6yhtj','a4662930_TOR');
+$con = mysqli_connect('localhost','385937','1dccoralhistory','385937');
 if (!$con)
   {
   die('Could not connect: ' . mysqli_error($con));

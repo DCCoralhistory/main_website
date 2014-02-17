@@ -27,9 +27,6 @@
 /      <div class="jumbotron">
       	<h3>Interview with:</h3>
 <?php
-//$q = intval($_GET['q']);
-//$q = $_GET['q'];
-//sql="SELECT * FROM interviews WHERE id = '".$q."'";
 include 'db_connect.php';
 while($row = mysqli_fetch_array($result))
   {

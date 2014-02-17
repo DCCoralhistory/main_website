@@ -39,22 +39,31 @@
 			<div class="header">
 				<ul class="nav nav-pills">
 					<li class="active">
-						<a href="#">Class 71A</a>
+						<a href="projects.php?schoolClass=A">Class 71A</a>
 					</li>
 					<li>
-						<a href="projects-71B.html">Class 71B</a>
+						<a href="projects.php?schoolClass=B">Class 71B</a>
 					</li>
 					<li>
-						<a href="projects-71C.html">Class 71C</a>
+						<a href="projects.php?schoolClass=C">Class 71C</a>
 					</li>
 					<li>
-						<a href="projects-71D.html">Class 71D</a>
+						<a href="projects.php?schoolClass=D">Class 71D</a>
 					</li>
 				</ul>
 			</div>
 
 			<div class="row marketing">
 				<div class="col-lg-3">
+					<?php
+					require_once 'db_connect.php';
+					$schoolClass=$_GET['schoolClass'];
+					$sql="SELECT * FROM interviews WHERE class= '".$schoolClass."'";
+					$result=mysqli_query($con,$sql);
+					while($q.next()!=null) {
+					echo "<a href='profile.php?q=1'> <img src='database/einstein-albert.jpg.jpg' class='img-rounded' alt='Nelson Mandela'/> <h4>Albert Einstein</h4><p>Interviewed by Cian O'Donnell. </p><button type='button' class='btn btn-success'>Click to view profile &raquo;</button></a>";
+					}
+					?>
 					<a href="profile.php?q=1"> <img src="database/einstein-albert.jpg.jpg" class="img-rounded" alt="Nelson Mandela"/> <h4>Albert Einstein</h4>
 					<p>
 						Interviewed by Cian O'Donnell.
