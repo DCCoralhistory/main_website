@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>DCC Oral History</title>
+
+<!-- START Konami -->
+<style>
+.wtf {
+display:none;
+width: auto;
+height: 80%;
+margin:auto;
+text-align:center;
+padding: 0 0 0 0;
+}
+.wtf a , .wtf a:hover{
+text-decoration:none;
+color:#fff;
+}
+</style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript">
+if ( window.addEventListener ) {
+  var progress = 0, konami = [38,38,40,40,37,39,37,39,66,65];
+  window.addEventListener("keydown", function(event) {
+
+/* check to see if cycle is broken from next key */
+    if ( event.keyCode == konami[progress] ){ progress++;}
+    /* if so, reset */
+    else{ progress = 0;}
+    
+    /* if cycle is completed, perform action */
+    if ( progress == 10 ){
+                      /* REMEMBER : to redirect [window.location = "http://example.com";] */
+                      /* $(".container").animate({fontSize:"+=100px"}); */
+                      /* try constant jquery ui explode/implode */
+                      $(".container").toggle(100);
+                      $(".wtf").css("display","block");
+                      $("body").css({"background":"url(http://4vector.com/i/free-vector-question-smiley-clip-art_103929_Question_Smiley_clip_art_hight.png)","background-size":"2%"});
+                      }
+    }, true);
+}
+</script>
+
+<!-- Key Codes http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes -->
+
+<!-- END Konami -->
+
+    <link href="css/dccoralhistory.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+
+<img src="http://4vector.com/i/free-vector-question-smiley-clip-art_103929_Question_Smiley_clip_art_hight.png" class="wtf" alt="WHAT HAPENNED???">
+<!-- <a href="http://en.wikipedia.org/wiki/Konami_Code" target="_blank">WHAT DID I DO???</a> -->
+</img>
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <h3 class="text-title">DCC Oral History</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Oral History Project</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-lg btn-success" href="about.html" role="button">Learn More &raquo;</a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Class 71A</h4>
+          <p>Click below to view transcriptions and download audio files for TY class 71A.</p>
+          <p><a class="btn btn-primary" href="projects.html" role="button">Click here &raquo;</a></p>
+
+          <h4>Class 71C</h4>
+          <p>Click below to view transcriptions and download audio files for TY class 71C.</p>
+          <p><a class="btn btn-primary" href="projects-71B.html" role="button">Click here &raquo;</a></p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Class 71B</h4>
+          <p>Click below to view transcriptions and download audio files for TY class 71B.</p>
+          <p><a class="btn btn-primary" href="projects-71C.html" role="button">Click here &raquo;</a></p>
+
+          <h4>Class 71D</h4>
+          <p>Click below to view transcriptions and download audio files for TY class 71D.</p>
+          <p><a class="btn btn-primary" href="projects-71D.html" role="button">Click here &raquo;</a></p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy; DCC 2014 (psst, try up up down down left right left right b a)</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+  </body>
+</html>
+						

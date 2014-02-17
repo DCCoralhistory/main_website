@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<head>
+		<title>TG.php</title>
+	</head>
 <?php
  
 $q = intval($_GET['q']);
@@ -37,3 +43,7 @@ while(true)
 echo "</table>";
  
 mysqli_close($con);
+?>
+ 
+</body>
+</html>

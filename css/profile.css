@@ -308,6 +308,9 @@ body {
   line-height: 1.428571429;
   color: #333333;
   background-color: #ffffff;
+  background-image: url(../database/book-background.jpg);
+  background-position: center;
+  background-repeat: repeat-y;
 }
 
 input,
@@ -521,7 +524,6 @@ cite {
 }
 .text-title {
 	color: #333333;
-	font-weight: bold;
 	/* New style for titles of pages 14-1-13 link using class*/
 }
 .text-muted {
@@ -7201,5 +7203,11 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
-  
+  body {
+  padding-top: 20px;
+  background-color: #FFFFFF;
+  background-image: url(../database/book-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* ########## End of Modified 14-01-2014 ########## */
