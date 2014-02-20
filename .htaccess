@@ -27,3 +27,12 @@ Options +ExecCGI +FollowSymLinks
 #AuthType Basic
 #AuthUserFile ../../htpasswd/www/.htpasswd
 #Require valid-user
+
+#//Custom 403 errors
+ErrorDocument 403 errors/403.html
+
+#//Custom 404 errors
+ErrorDocument 404 errors/404.html
+
+#//Prevent directory listings
+Options All -Indexes

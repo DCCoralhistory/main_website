@@ -15,41 +15,38 @@
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="quick_fixes.js"></script>
-
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			var get_schoolClass = '<?php print $_GET['schoolClass']; ?>';
+				switch (get_schoolClass) {
+					case "A":
+						$("#classMenu").html('<li class="active"><a href="projects.php?schoolClass=A">Class 71A</a></li><li><a href="projects.php?schoolClass=B">Class 71B</a></li><li><a href="projects.php?schoolClass=C">Class 71C</a></li><li><a href="projects.php?schoolClass=D">Class 71D</a></li>');
+						break;
+					case "B":
+						$("#classMenu").html('<li><a href="projects.php?schoolClass=A">Class 71A</a></li><li class="active"><a href="projects.php?schoolClass=B">Class 71B</a></li><li><a href="projects.php?schoolClass=C">Class 71C</a></li><li><a href="projects.php?schoolClass=D">Class 71D</a></li>');
+						break;
+					case "C":
+						$("#classMenu").html('<li><a href="projects.php?schoolClass=A">Class 71A</a></li><li><a href="projects.php?schoolClass=B">Class 71B</a></li><li class="active"><a href="projects.php?schoolClass=C">Class 71C</a></li><li><a href="projects.php?schoolClass=D">Class 71D</a></li>');
+						break;
+					case "D":
+						$("#classMenu").html('<li><a href="projects.php?schoolClass=A">Class 71A</a></li><li><a href="projects.php?schoolClass=B">Class 71B</a></li><li><a href="projects.php?schoolClass=C">Class 71C</a></li><li class="active"><a href="projects.php?schoolClass=D">Class 71D</a></li>');
+						break;
+					default:
+						$("#classMenu").html(get_schoolClass);
+						break; // always break on default to keep consistency 
+				}
+			});
+		</script>
 	</head>
 
 	<body>
 
 		<div class="container">
-			<div class="header">
-				<ul class="nav nav-pills pull-right">
-					<li>
-						<a href="index.html">Home</a>
-					</li>
-					<li>
-						<a href="about.html">About</a>
-					</li>
-					<li class="active">
-						<a href="#">Projects</a>
-					</li>
-				</ul>
-				<h3 class="text-title">DCC Oral History</h3>
-			</div>
+			<?php require_once 'includes/header_file.php';?>
 
 			<div class="header">
-				<ul class="nav nav-pills">
-					<li class="active">
-						<a href="projects.php?schoolClass=A">Class 71A</a>
-					</li>
-					<li>
-						<a href="projects.php?schoolClass=B">Class 71B</a>
-					</li>
-					<li>
-						<a href="projects.php?schoolClass=C">Class 71C</a>
-					</li>
-					<li>
-						<a href="projects.php?schoolClass=D">Class 71D</a>
-					</li>
+				<ul class="nav nav-tabs" id="classMenu">
 				</ul>
 			</div>
 
@@ -57,11 +54,9 @@
 				<div class="col-lg-3">
 					<?php
 					require_once 'db_connect.php';
-					$schoolClass=$_GET['schoolClass'];
-					$sql="SELECT * FROM interviews WHERE class= '".$schoolClass."'";
-					$result=mysqli_query($con,$sql);
-					while($q.next()!=null) {
-					echo "<a href='profile.php?q=1'> <img src='database/einstein-albert.jpg.jpg' class='img-rounded' alt='Nelson Mandela'/> <h4>Albert Einstein</h4><p>Interviewed by Cian O'Donnell. </p><button type='button' class='btn btn-success'>Click to view profile &raquo;</button></a>";
+					while($row = mysqli_fetch_array($result)) {
+					/* $row = mysqli_fetch_array($result, MYSQLI_ASSOC);*/
+					echo "<div class='list-group'><a href='profile.php?q=" . $row['id'] . "'> <img src='" . $row[interviewed.img.loc] . "' class='img-rounded' alt='Nelson Mandela'/> <h4>Albert Einstein</h4><p>Interviewed by Cian O'Donnell. </p><button type='button' class='btn btn-success'>Click to view profile &raquo;</button></a></div>";
 					}
 					?>
 					<a href="profile.php?q=1"> <img src="database/einstein-albert.jpg.jpg" class="img-rounded" alt="Nelson Mandela"/> <h4>Albert Einstein</h4>

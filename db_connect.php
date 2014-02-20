@@ -1,7 +1,7 @@
 <?php 
 
 $q = $_GET['q'];
-$con = mysqli_connect('localhost','385937','1dccoralhistory','385937');
+$con = mysqli_connect('mysql.freehostingnoads.net','u657670770_user','sqldcc','u657670770_intda');
 if (!$con)
   {
   die('Could not connect: ' . mysqli_error($con));

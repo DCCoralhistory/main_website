@@ -15,16 +15,9 @@
   <body>
 
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-        </ul>
-        <h3 class="text-title">DCC Oral History</h3>
-      </div>
+      <?php require 'includes/header_file.php'; ?>
 
-/      <div class="jumbotron">
+      <div class="jumbotron">
       	<h3>Interview with:</h3>
 <?php
 include 'db_connect.php';
@@ -42,13 +35,7 @@ while($row = mysqli_fetch_array($result))
           
         <h3 class="interviewer.name"><b>' . $row['interviewer.name'] . '</b></h3>
         <img src=' .$row['interviewer.img.loc'] . ' alt="Albert Einstein" class="img-rounded" width="100%">
-        <p id="interviewer.shortDesc">Albert Einstein was born in Ulm, Germany on March 14, 1879. 
-        	As a child, Einstein revealed an extraordinary curiosity for
-        	 understanding the mysteries of science (started only at age 10/11).
-        	  A typical child (only to his socio-economic class — educated middle class),
-        	   Einstein took music lessons, playing both the violin and piano — a passion
-        	    that followed him into adulthood. Moving first to Italy and then to Switzerland,
-        	     the young prodigy graduated from high-school in 1896.</p>
+        <p id="interviewer.shortDesc">' . $row['interviewer.shortDesc'] . '</p>
         </div>';
   }
 
