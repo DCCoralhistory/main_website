@@ -11,21 +11,19 @@
 		<title>DCC Oral History</title>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script>var activeSong;
-				//Plays the song. Just pass the id of the audio element.
-				function play(id){
-					//Sets the active song to the song being played. All other functions depend on this.
-					activeSong = document.getElementById(id);
-					//Plays the song defined in the audio tag.
-					activeSong.play();
-
-					//Calculates the starting volume percentage of the song.
-					var percentageOfVolume = activeSong.volume / 1;
-					var percentageOfVolumeMeter = document.getElementById('volumeMeter').offsetWidth * percentageOfVolume;
-
-					//Fills out the volume status bar.
-					document.getElementById('volumeStatus').style.width = Math.round(percentageOfVolumeSlider) + "px";
-				}</script>
+		<script>
+		var activeSong;
+		function playPause(id){
+			//Sets the active song since one of the functions could be play.
+				activeSong = document.getElementById(id);
+			//Checks to see if the song is paused, if it is, play it from where it left off otherwise pause it.
+			if (activeSong.paused){
+				activeSong.play();
+			}else{
+				activeSong.pause();
+			}
+		}
+		</script>
 		<link href="css/dccoralhistory.css" rel="stylesheet">
 
 	</head>
@@ -43,10 +41,9 @@
 				<source src="https://dl.dropboxusercontent.com/u/261481934/Transcriptions/10-the_tallest_man_on_earth-kids_on_the_run.mp3" type="audio/mp3" />
 				Your browser does not support the audio tag.
 				</audio>
-				<button type="button" class="btn btn-default btn-lg" onclick="play('song')">
-					<span class="glyphicon glyphicon glyphicon-play"></span>
+				<button type="button" class="btn btn-default btn-lg" onclick="playPause('song')">
+					<span class="glyphicon glyphicon glyphicon-play"></span><span class="glyphicon glyphicon glyphicon-pause"></span>
 				</button>
-				
 			</div>
 			
 		</div>
