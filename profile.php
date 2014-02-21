@@ -42,10 +42,15 @@ while($row = mysqli_fetch_array($result))
 mysqli_close($con);
 ?>
       </div>
-        <p><a class="btn btn-lg btn-success" href="database/Vampire Weekend - Step (Official Lyrics Video).mp3" role="button" controls>
+        <p><a class="btn btn-lg btn-success" href="<?php require_once 'db_connect.php'; while($row = mysqli_fetch_array($result)){echo '' . $row['transcript.audio.src'] . ''}?>" role="button" controls>
 Click here to hear the audio file of the interview.</a></p>
       </div>
-
+	  
+		<form action="transcript_page_audio.php" method="post">
+		<input type="hidden" name="<?php require_once 'db_connect.php'; while($row = mysqli_fetch_array($result)){echo '' . $row['transcript.audio.src'] . ''}?>" />
+			<button type="button" class="btn btn-default"><input type="submit"></button>
+		</form>
+		
       <div class="row marketing">
         <div class="col-lg-6">
           <h4>Transcription</h4>

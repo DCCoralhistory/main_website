@@ -43,8 +43,8 @@ define("DB_PASS", "root");
 
 
 define("COOKIE_RUNTIME", 1209600);
-define("COOKIE_DOMAIN", ".127.0.0.1");
-define("COOKIE_SECRET_KEY", "1gp@TMPS{+$78sfpMJFe-92s");
+define("COOKIE_DOMAIN", ".www.dccoralhistory.tk");
+define("COOKIE_SECRET_KEY", "@m0nk3ynu7sC0Wp47");
 
 
 
@@ -96,10 +96,10 @@ define("EMAIL_SMTP_ENCRYPTION", "ssl");
  */
 
 
-define("EMAIL_PASSWORDRESET_URL", "http://127.0.0.1/php-login-advanced/password_reset.php");
-define("EMAIL_PASSWORDRESET_FROM", "no-reply@example.com");
-define("EMAIL_PASSWORDRESET_FROM_NAME", "My Project");
-define("EMAIL_PASSWORDRESET_SUBJECT", "Password reset for PROJECT XY");
+define("EMAIL_PASSWORDRESET_URL", "http://www.dccoralhistory.tk/php-login-advanced/password_reset.php");
+define("EMAIL_PASSWORDRESET_FROM", "no-reply@monkeynuts.com");
+define("EMAIL_PASSWORDRESET_FROM_NAME", "DCCHistory");
+define("EMAIL_PASSWORDRESET_SUBJECT", "Password reset for DCCHistory");
 define("EMAIL_PASSWORDRESET_CONTENT", "Please click on this link to reset your password:");
 
 
@@ -113,10 +113,10 @@ define("EMAIL_PASSWORDRESET_CONTENT", "Please click on this link to reset your p
  */
 
 
-define("EMAIL_VERIFICATION_URL", "http://127.0.0.1/php-login-advanced/register.php");
-define("EMAIL_VERIFICATION_FROM", "no-reply@example.com");
-define("EMAIL_VERIFICATION_FROM_NAME", "My Project");
-define("EMAIL_VERIFICATION_SUBJECT", "Account activation for PROJECT XY");
+define("EMAIL_VERIFICATION_URL", "http://www.dccoralhistory.tk/php-login-advanced/register.php");
+define("EMAIL_VERIFICATION_FROM", "no-reply@monkeynuts.com");
+define("EMAIL_VERIFICATION_FROM_NAME", "DCCHistory");
+define("EMAIL_VERIFICATION_SUBJECT", "Account activation for DCCHistory");
 define("EMAIL_VERIFICATION_CONTENT", "Please click on this link to activate your account:");
 
 
