@@ -88,31 +88,14 @@
 	else 
 	{	
 	?>
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-	<table border="0">
-		<tr>
-			<td>Username:</td>
-			<td>
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">		
+			Username:			
 				<input type="text" name="username" maxlength="60">
-			</td>
-		</tr>
-		<tr>
-			<td>Password:</td>
-			<td>
+			Password:			
 				<input type="password" name="pass" maxlength="10">
-			</td>
-		</tr>
-		<tr>
-			<td>Confirm Password:</td>
-			<td>
+			Confirm Password:
 				<input type="password" name="pass2" maxlength="10">
-			</td>
-		</tr>
-		<tr>
-			<th colspan=2><input type="submit" name="submit" 
-				value="Register"></th>
-		</tr>
-	</table>
+			<input type="submit" name="submit" value="Register">
 </form>
 <?php
 	}
