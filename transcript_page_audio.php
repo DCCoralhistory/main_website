@@ -54,7 +54,7 @@
 					<button type="button" class="btn btn-default btn-lg" onclick="mute()" id="nonfocused">
 						<span class="glyphicon glyphicon glyphicon-volume-off"></span>
 					</button>
-					<input style="float:left" type="checkbox" name="mute" checked data-size="large" data-label-text="<span class='glyphicon glyphicon-play'></span>" data-on-text="<span class='glyphicon glyphicon glyphicon-play'></span>" data-off-text="<span class='glyphicon glyphicon-pause'></span>">
+					<!--<input style="float:left" type="checkbox" name="mute" checked data-size="large" data-label-text="<span class='glyphicon glyphicon-play'></span>" data-on-text="<span class='glyphicon glyphicon glyphicon-play'></span>" data-off-text="<span class='glyphicon glyphicon-pause'></span>">-->
 					<button type="button" class="btn btn-default btn-lg">
 						<a href="direct_download.php?file=https://dl.dropboxusercontent.com/u/261481934/Transcriptions/10-the_tallest_man_on_earth-kids_on_the_run.mp3"><span class="glyphicon glyphicon glyphicon-download"></span></a>
 					</button>
@@ -64,12 +64,9 @@
 					<input id="option1" type="radio" name="mute" value="option1" data-on-text='<span class="glyphicon glyphicon glyphicon-play"></span>' data-off-text="<span class='glyphicon glyphicon-pause'></span>">
 					<input id="option2" type="radio" name="mute" value="option2">
 				</div>
-				<div  class="progress progress-striped active">
-					<div id="songSlider" onclick="setSongPosition(this,event)" class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
-					<span id="trackProgress"></span>
-					</div>
-				</div>
+				
 				<div id="volumeMeter" onclick="setNewVolume(this,event)"><span id="volumeStatus"></span></div>
+				<div id="songSlider" onclick="setSongPosition(this,event)"><span id="trackProgress"></span></div>
 				<!-- <div id="songSlider" onclick="setSongPosition(this,event)"><span id="trackProgress"></span></div> -->
 				<div id="songTime">SongTime</div>
 				<!-- <div class="progress">
